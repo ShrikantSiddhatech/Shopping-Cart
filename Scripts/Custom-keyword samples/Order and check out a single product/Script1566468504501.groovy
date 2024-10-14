@@ -14,7 +14,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
 CustomKeywords.'sample.Login.loginIntoApplicationWithGlobalVariable'()
-
+WebUI.delay(1)
 WebUI.waitForElementPresent(findTestObject('Pages/Shop page/lnkShop'), GlobalVariable.waitPresentTimeout)
 
 WebUI.click(findTestObject('Pages/Shop page/lnkShop'))
