@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     stages {
-        stage('Katalon Test Case') {
+        stage('Katalon TC') {
             steps {
                 sh '''
                     cd /Users/aditidixit/Downloads/KRE.app/Contents/MacOS
