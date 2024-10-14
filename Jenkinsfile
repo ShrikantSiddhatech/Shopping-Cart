@@ -17,4 +17,19 @@ pipeline {
             }
         }
     }
+
+    post {
+        always {
+            script {
+                // Send email notification
+                emailext(
+                    subject: "Build ${currentBuild.fullDisplayName} - ${currentBuild.currentResult}",
+                    body: """<p>Build ${currentBuild.fullDisplayName} finished with status: ${currentBuild.currentResult}</p>""",
+                    to: 'shrikantd@siddhatech.com.com',
+                    mimeType: 'text/html'
+                )
+            }
+        }
+    }
+
 }
