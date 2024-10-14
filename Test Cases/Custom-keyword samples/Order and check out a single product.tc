@@ -4,6 +4,7 @@
    <name>Order and check out a single product</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>97bcb31c-8977-47a0-819e-5a33e6ab282e</testCaseGuid>
    <variableLinks>
       <testDataLinkId></testDataLinkId>
@@ -52,6 +53,12 @@
       <type>DEFAULT</type>
       <value></value>
       <variableId>5cb399d2-1bfc-408e-8254-a03dd003f568</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>6e018290-1fc8-49a3-bade-e3de217df42c</variableId>
    </variableLinks>
    <variable>
       <defaultValue>GlobalVariable.firstName</defaultValue>
@@ -108,5 +115,12 @@
       <id>5cb399d2-1bfc-408e-8254-a03dd003f568</id>
       <masked>false</masked>
       <name>Phone</name>
+   </variable>
+   <variable>
+      <defaultValue>GlobalVariable.urlShop</defaultValue>
+      <description></description>
+      <id>6e018290-1fc8-49a3-bade-e3de217df42c</id>
+      <masked>false</masked>
+      <name>applicationURL</name>
    </variable>
 </TestCaseEntity>

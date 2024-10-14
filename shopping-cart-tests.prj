@@ -6,6 +6,8 @@
    <UUID>0714681d-2976-4bb4-8b33-69ca589211ff</UUID>
    <freeLicense>false</freeLicense>
    <migratedVersion>5.9.0</migratedVersion>
+   <modifiedEdition>ENTERPRISE</modifiedEdition>
+   <modifiedVersion>9.7.2</modifiedVersion>
    <pageLoadTimeout>0</pageLoadTimeout>
    <projectFileLocation>/Users/aditidixit/Documents/Shopping-Cart/shopping-cart-tests.prj</projectFileLocation>
    <sourceContent>

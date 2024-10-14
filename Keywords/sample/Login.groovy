@@ -29,18 +29,18 @@ import internal.GlobalVariable
  * */
 public class Login {
 	@Keyword
-	def static void loginIntoApplication(String applicationURL,String username,String password){
+	def static void loginIntoApplication(String applicationURL, String username, String password){
 
 		WebUI.openBrowser(applicationURL)
-//		WebUI.waitForPageLoad(GlobalVariable.waitPresentTimeout)
-//		WebUI.maximizeWindow()
-//
-//		WebUI.waitForElementVisible(findTestObject('Pages/MyAccount page/nav_HomeMyaccount'), GlobalVariable.waitPresentTimeout)
-//
-//		WebUI.sendKeys(findTestObject('Pages/MyAccount page/txtUsername'), username)
-//		WebUI.sendKeys(findTestObject('Pages/MyAccount page/txtPassword'), password)
-//		WebUI.click(findTestObject('Pages/MyAccount page/btnLogin'))
-//		WebUI.delay(1)
+		WebUI.waitForPageLoad(GlobalVariable.waitPresentTimeout)
+		WebUI.maximizeWindow()
+
+		WebUI.waitForElementVisible(findTestObject('Pages/MyAccount page/nav_HomeMyaccount'), GlobalVariable.waitPresentTimeout)
+
+		WebUI.sendKeys(findTestObject('Pages/MyAccount page/txtUsername'), username)
+		WebUI.sendKeys(findTestObject('Pages/MyAccount page/txtPassword'), password)
+		WebUI.click(findTestObject('Pages/MyAccount page/btnLogin'))
+		WebUI.delay(1)
 	}
 
 	@Keyword
