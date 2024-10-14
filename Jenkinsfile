@@ -10,7 +10,7 @@ pipeline {
                         -projectPath="/Users/aditidixit/Documents/Shopping-Cart/shopping-cart-tests.prj" \
                         -retry=0 \
                         -testSuitePath="Test Suites/TS_1" \
-                        -browserType="Safari" \
+                        -browserType="Chrome" \
                         -executionProfile="default" \
                         -apiKey="a7e45f80-496e-47da-9d8d-09cca7cac63f"
                     '''    
