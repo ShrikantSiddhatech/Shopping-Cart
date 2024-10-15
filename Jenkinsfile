@@ -16,18 +16,24 @@ pipeline {
                     '''    
             }
         }
+
+        stage('Zip Folder'){
+            steps {
+                sh 'zip -r reports.zip $WORKSPACE/Reports/*'
+            }
+        }
     }
 
     post {
         always {
             script {
-                // Send email notification
                 emailext(
-                    subject: "Build ${currentBuild.fullDisplayName} - ${currentBuild.currentResult}",
-                    body: """<p>Build ${currentBuild.fullDisplayName} finished with status: ${currentBuild.currentResult}</p>""",
-                    attachments: "/Users/aditidixit/Documents/Shopping-Cart/Reports/",
-                    to: 'shrikantd@siddhatech.com',
-                    mimeType: 'text/html'
+                    subject: "Katalon Test Report",
+                    body: "Please find the attached Katalon test report.",
+                    attachLog: true,
+                    attachmentsPattern: 'reports.zip',
+                    recipientProviders: [[$class: 'CulpritsRecipientProvider'], [$class: 'DevelopersRecipientProvider']],
+                    to: 'shrikantd@siddhatech.com'
                 )
             }
         }
