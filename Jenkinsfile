@@ -25,7 +25,7 @@ pipeline {
                 emailext(
                     subject: "Build ${currentBuild.fullDisplayName} - ${currentBuild.currentResult}",
                     body: """<p>Build ${currentBuild.fullDisplayName} finished with status: ${currentBuild.currentResult}</p>""",
-                    attachments: "${WORKSPACE}/Reports/Report.pdf",
+                    attachments: "${WORKSPACE}/Reports/Report.html",
                     to: 'shrikantd@siddhatech.com',
                     mimeType: 'text/html'
                 )
