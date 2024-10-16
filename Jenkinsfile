@@ -18,17 +18,24 @@ pipeline {
             }
         }
 
-        stage('List Workspace') {
-            steps {
-                sh 'ls -R' // This will list all files and directories in the workspace
-            }
-        }
+        // stage('List Workspace') {
+        //     steps {
+        //         sh 'ls -R' // This will list all files and directories in the workspace
+        //     }
+        // }
 
         // stage('Archive Reports') {
         //     steps {
         //         archiveArtifacts artifacts: 'Reports/*.html', allowEmptyArchive: true
         //     }
         // }
+
+        stage('List Reports Directory') {
+            steps {
+                sh 'ls -R "/Users/aditidixit/Downloads/KRE.app/Contents/MacOS/Reports" || echo "No Reports folder found"'
+            }
+        }
+
     }
 
     post {
