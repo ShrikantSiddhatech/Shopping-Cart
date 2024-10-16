@@ -33,17 +33,15 @@ pipeline {
                 )
             }
         }
-    }
 
-    post {
         always {
-          publishHTML(target: [
-             reportDir: 'Reports',
-             reportFiles: 'Report.html', // Adjust as needed
-             reportName: 'Katalon Test Report',
-             keepAll: true,
-             alwaysLinkToLastBuild: true
-          ])
+            publishHTML(target: [
+               reportDir: 'Reports',
+               reportFiles: 'Report.html', // Adjust as needed
+               reportName: 'Katalon Test Report',
+               keepAll: true,
+               alwaysLinkToLastBuild: true
+            ])
         }
     }
 
