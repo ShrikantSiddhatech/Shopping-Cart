@@ -17,6 +17,12 @@ pipeline {
                     '''    
             }
         }
+        
+        stage('Archive Reports') {
+            steps {
+                archiveArtifacts artifacts: 'Reports/*.html', allowEmptyArchive: true
+            }
+        }
     }
 
     post {
