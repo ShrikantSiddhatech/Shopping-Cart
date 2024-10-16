@@ -17,12 +17,18 @@ pipeline {
                     '''    
             }
         }
-        
-        stage('Archive Reports') {
+
+        stage('List Workspace') {
             steps {
-                archiveArtifacts artifacts: 'Reports/*.html', allowEmptyArchive: true
+                sh 'ls -R' // This will list all files and directories in the workspace
             }
         }
+
+        // stage('Archive Reports') {
+        //     steps {
+        //         archiveArtifacts artifacts: 'Reports/*.html', allowEmptyArchive: true
+        //     }
+        // }
     }
 
     post {
@@ -38,13 +44,13 @@ pipeline {
         }
 
         // Move publishHTML outside of the script block
-        publishHTML(target: [
-            reportDir: 'Reports',
-            reportFiles: 'Report.html', // Ensure this matches your report file name
-            reportName: 'Katalon Test Report',
-            keepAll: true,
-            alwaysLinkToLastBuild: true
-        ])
+        // publishHTML(target: [
+        //     reportDir: 'Reports',
+        //     reportFiles: 'Report.html', // Ensure this matches your report file name
+        //     reportName: 'Katalon Test Report',
+        //     keepAll: true,
+        //     alwaysLinkToLastBuild: true
+        // ])
     }
 }
 
