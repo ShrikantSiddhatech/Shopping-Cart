@@ -17,8 +17,6 @@ pipeline {
                     '''    
             }
         }
-
-
     }
 
     post {
@@ -32,15 +30,13 @@ pipeline {
                     to: 'shrikantd@siddhatech.com'
                 )
             }
-        }
 
-        always {
             publishHTML(target: [
-               reportDir: 'Reports',
-               reportFiles: 'Report.html', // Adjust as needed
-               reportName: 'Katalon Test Report',
-               keepAll: true,
-               alwaysLinkToLastBuild: true
+                reportDir: 'Reports',
+                reportFiles: 'Report.html',
+                reportName: 'Katalon Test Report',
+                keepAll: true,
+                alwaysLinkToLastBuild: true
             ])
         }
     }
