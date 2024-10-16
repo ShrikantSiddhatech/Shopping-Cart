@@ -12,16 +12,13 @@ pipeline {
                         -testSuitePath="Test Suites/TS_1" \
                         -browserType="Chrome" \
                         -executionProfile="default" \
-                        -apiKey="a7e45f80-496e-47da-9d8d-09cca7cac63f"
+                        -apiKey="a7e45f80-496e-47da-9d8d-09cca7cac63f" \
+                        -reportFolder='Reports'
                     '''    
             }
         }
 
-        stage('Zip Folder'){
-            steps {
-                sh 'zip -r reports.zip $WORKSPACE/Reports/*'
-            }
-        }
+
     }
 
     post {
@@ -31,11 +28,22 @@ pipeline {
                     subject: "Katalon Test Report",
                     body: "Please find the attached Katalon test report.",
                     attachLog: true,
-                    attachmentsPattern: 'reports.zip',
                     recipientProviders: [[$class: 'CulpritsRecipientProvider'], [$class: 'DevelopersRecipientProvider']],
                     to: 'shrikantd@siddhatech.com'
                 )
             }
+        }
+    }
+
+    post {
+        always {
+          publishHTML(target: [
+             reportDir: 'Reports',
+             reportFiles: 'Report.html', // Adjust as needed
+             reportName: 'Katalon Test Report',
+             keepAll: true,
+             alwaysLinkToLastBuild: true
+          ])
         }
     }
 
