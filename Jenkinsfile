@@ -1,6 +1,11 @@
 pipeline {
     agent any
     
+    options {
+        disableConcurrentBuilds()
+    }
+
+
     stages {
         stage('Katalon TC') {
             steps {
