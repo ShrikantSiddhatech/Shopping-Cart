@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="TS_1" time="76.454" tests="1" failures="0" errors="0">
+   <testsuite name="TS_1" tests="1" failures="0" errors="0" time="76.454" skipped="0" timestamp="16-10-2024T16:21:10" hostname="aditidixit - 192.168.1.175" id="Test Suites/TS_1">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform"/>
+         <property name="logFolder" value="/Users/aditidixit/Documents/Shopping-Cart/Reports/20241016_162105/TS_1/20241016_162106"/>
+         <property name="logFiles" value="/Users/aditidixit/Documents/Shopping-Cart/Reports/20241016_162105/TS_1/20241016_162106/execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="aditidixit - 192.168.1.175"/>
+         <property name="os" value="Mac OS X 64bit"/>
+         <property name="katalonVersion" value="9.7.2.223"/>
+         <property name="browser" value="Chrome 129.0.0.0"/>
+         <property name="hostAddress" value="192.168.1.175"/>
+         <property name="sessionId" value="a1af0b7665585842e9ad58fe13da3e9e"/>
+         <property name="seleniumVersion" value="3.141.59"/>
+         <property name="proxyInformation" value="ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList=&quot;&quot;, isApplyToDesiredCapabilities=true }"/>
+         <property name="platform" value="Mac OS X"/>
+      </properties>
+      <testcase name="Test Cases/Custom-keyword samples/Order and check out a single product" time="76.111" classname="Test Cases/Custom-keyword samples/Order and check out a single product" status="PASSED">
+         <system-out><![CDATA[16-10-2024T16:21:10 - [TEST_CASE][PASSED] - Test Cases/Custom-keyword samples/Order and check out a single product: Test Cases/Custom-keyword samples/Order and check out a single product
+
+16-10-2024T16:21:11 - [TEST_STEP][PASSED] - sample.Login.loginIntoApplicationWithGlobalVariable(): sample.Login.loginIntoApplicationWithGlobalVariable is PASSED
+
+16-10-2024T16:21:11 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+16-10-2024T16:21:11 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+16-10-2024T16:21:24 - [MESSAGE][PASSED] - Browser is opened with url: 'http://cms.demo.katalon.com/my-account'
+
+16-10-2024T16:21:24 - [MESSAGE][PASSED] - Wait for page load successfully
+
+16-10-2024T16:21:24 - [MESSAGE][PASSED] - Current window maximized
+
+16-10-2024T16:21:25 - [MESSAGE][PASSED] - Object 'Object Repository/Pages/MyAccount page/nav_HomeMyaccount' is visible
+
+16-10-2024T16:21:25 - [MESSAGE][PASSED] - Keys 'customer' sent to object: 'Object Repository/Pages/MyAccount page/txtUsername'
+
+16-10-2024T16:21:25 - [MESSAGE][PASSED] - Keys 'crz7mrb.KNG3yxv1fbn' sent to object: 'Object Repository/Pages/MyAccount page/txtPassword'
+
+16-10-2024T16:21:28 - [MESSAGE][PASSED] - Object: 'Object Repository/Pages/MyAccount page/btnLogin' is clicked on
+
+16-10-2024T16:21:29 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+16-10-2024T16:21:29 - [MESSAGE][PASSED] - sample.Login.loginIntoApplicationWithGlobalVariable is PASSED
+
+16-10-2024T16:21:29 - [TEST_STEP][PASSED] - delay(1): Delayed 1 second(s)
+
+16-10-2024T16:21:30 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+16-10-2024T16:21:30 - [TEST_STEP][PASSED] - waitForElementPresent(findTestObject("Pages/Shop page/lnkShop"), waitPresentTimeout): Object 'Object Repository/Pages/Shop page/lnkShop' is present
+
+16-10-2024T16:21:31 - [MESSAGE][PASSED] - Object 'Object Repository/Pages/Shop page/lnkShop' is present
+
+16-10-2024T16:21:31 - [TEST_STEP][PASSED] - click(findTestObject("Pages/Shop page/lnkShop")): Object: 'Object Repository/Pages/Shop page/lnkShop' is clicked on
+
+16-10-2024T16:21:33 - [MESSAGE][PASSED] - Object: 'Object Repository/Pages/Shop page/lnkShop' is clicked on
+
+16-10-2024T16:21:33 - [TEST_STEP][PASSED] - sample.Shop.addToCartWithGlobalVariable(): sample.Shop.addToCartWithGlobalVariable is PASSED
+
+16-10-2024T16:21:40 - [MESSAGE][PASSED] - Navigate to 'http://cms.demo.katalon.com/product/flying-ninja' successfully
+
+16-10-2024T16:21:40 - [MESSAGE][PASSED] - Object 'Object Repository/Pages/Shop page/btnAddToCart' is present
+
+16-10-2024T16:21:43 - [MESSAGE][PASSED] - Object: 'Object Repository/Pages/Shop page/btnAddToCart' is clicked on
+
+16-10-2024T16:21:43 - [MESSAGE][PASSED] - Object 'Object Repository/Pages/Shop page/lnkViewCart' is present
+
+16-10-2024T16:21:46 - [MESSAGE][PASSED] - Object: 'Object Repository/Pages/Shop page/lnkViewCart' is clicked on
+
+16-10-2024T16:21:46 - [MESSAGE][PASSED] - Object 'Object Repository/Pages/Shop page/btnProceed' is present
+
+16-10-2024T16:21:46 - [MESSAGE][PASSED] - sample.Shop.addToCartWithGlobalVariable is PASSED
+
+16-10-2024T16:21:46 - [TEST_STEP][PASSED] - sample.Checkout.CheckoutShop(firstName, lastName, companyName, country, address, city, postCode, Phone): sample.Checkout.CheckoutShop is PASSED
+
+16-10-2024T16:21:50 - [MESSAGE][PASSED] - Object: 'Object Repository/Pages/Checkout page/lnkCheckout' is clicked on
+
+16-10-2024T16:21:50 - [MESSAGE][PASSED] - Object 'Object Repository/Pages/Checkout page/txtFirstname' is visible
+
+16-10-2024T16:21:51 - [MESSAGE][PASSED] - Text 'katalon' is set on object 'Object Repository/Pages/Checkout page/txtFirstname'
+
+16-10-2024T16:21:52 - [MESSAGE][PASSED] - Text 'customer' is set on object 'Object Repository/Pages/Checkout page/txtLastname'
+
+16-10-2024T16:21:52 - [MESSAGE][PASSED] - Object 'Object Repository/Pages/Checkout page/inputCompanyName' is visible
+
+16-10-2024T16:21:53 - [MESSAGE][PASSED] - Text 'KMS' is set on object 'Object Repository/Pages/Checkout page/inputCompanyName'
+
+16-10-2024T16:21:57 - [MESSAGE][INFO] - The list of options is: [SELECT A COUNTRY…, ÅLAND ISLANDS, AFGHANISTAN, ALBANIA, ALGERIA, AMERICAN SAMOA, ANDORRA, ANGOLA, ANGUILLA, ANTARCTICA, ANTIGUA AND BARBUDA, ARGENTINA, ARMENIA, ARUBA, AUSTRALIA, AUSTRIA, AZERBAIJAN, BAHAMAS, BAHRAIN, BANGLADESH, BARBADOS, BELARUS, BELAU, BELGIUM, BELIZE, BENIN, BERMUDA, BHUTAN, BOLIVIA, BONAIRE, SAINT EUSTATIUS AND SABA, BOSNIA AND HERZEGOVINA, BOTSWANA, BOUVET ISLAND, BRAZIL, BRITISH INDIAN OCEAN TERRITORY, BRUNEI, BULGARIA, BURKINA FASO, BURUNDI, CAMBODIA, CAMEROON, CANADA, CAPE VERDE, CAYMAN ISLANDS, CENTRAL AFRICAN REPUBLIC, CHAD, CHILE, CHINA, CHRISTMAS ISLAND, COCOS (KEELING) ISLANDS, COLOMBIA, COMOROS, CONGO (BRAZZAVILLE), CONGO (KINSHASA), COOK ISLANDS, COSTA RICA, CROATIA, CUBA, CURAÇAO, CYPRUS, CZECH REPUBLIC, DENMARK, DJIBOUTI, DOMINICA, DOMINICAN REPUBLIC, ECUADOR, EGYPT, EL SALVADOR, EQUATORIAL GUINEA, ERITREA, ESTONIA, ETHIOPIA, FALKLAND ISLANDS, FAROE ISLANDS, FIJI, FINLAND, FRANCE, FRENCH GUIANA, FRENCH POLYNESIA, FRENCH SOUTHERN TERRITORIES, GABON, GAMBIA, GEORGIA, GERMANY, GHANA, GIBRALTAR, GREECE, GREENLAND, GRENADA, GUADELOUPE, GUAM, GUATEMALA, GUERNSEY, GUINEA, GUINEA-BISSAU, GUYANA, HAITI, HEARD ISLAND AND MCDONALD ISLANDS, HONDURAS, HONG KONG, HUNGARY, ICELAND, INDIA, INDONESIA, IRAN, IRAQ, IRELAND, ISLE OF MAN, ISRAEL, ITALY, IVORY COAST, JAMAICA, JAPAN, JERSEY, JORDAN, KAZAKHSTAN, KENYA, KIRIBATI, KUWAIT, KYRGYZSTAN, LAOS, LATVIA, LEBANON, LESOTHO, LIBERIA, LIBYA, LIECHTENSTEIN, LITHUANIA, LUXEMBOURG, MACAO S.A.R., CHINA, MADAGASCAR, MALAWI, MALAYSIA, MALDIVES, MALI, MALTA, MARSHALL ISLANDS, MARTINIQUE, MAURITANIA, MAURITIUS, MAYOTTE, MEXICO, MICRONESIA, MOLDOVA, MONACO, MONGOLIA, MONTENEGRO, MONTSERRAT, MOROCCO, MOZAMBIQUE, MYANMAR, NAMIBIA, NAURU, NEPAL, NETHERLANDS, NEW CALEDONIA, NEW ZEALAND, NICARAGUA, NIGER, NIGERIA, NIUE, NORFOLK ISLAND, NORTH KOREA, NORTH MACEDONIA, NORTHERN MARIANA ISLANDS, NORWAY, OMAN, PAKISTAN, PALESTINIAN TERRITORY, PANAMA, PAPUA NEW GUINEA, PARAGUAY, PERU, PHILIPPINES, PITCAIRN, POLAND, PORTUGAL, PUERTO RICO, QATAR, REUNION, ROMANIA, RUSSIA, RWANDA, SÃO TOMÉ AND PRÍNCIPE, SAINT BARTHÉLEMY, SAINT HELENA, SAINT KITTS AND NEVIS, SAINT LUCIA, SAINT MARTIN (DUTCH PART), SAINT MARTIN (FRENCH PART), SAINT PIERRE AND MIQUELON, SAINT VINCENT AND THE GRENADINES, SAMOA, SAN MARINO, SAUDI ARABIA, SENEGAL, SERBIA, SEYCHELLES, SIERRA LEONE, SINGAPORE, SLOVAKIA, SLOVENIA, SOLOMON ISLANDS, SOMALIA, SOUTH AFRICA, SOUTH GEORGIA/SANDWICH ISLANDS, SOUTH KOREA, SOUTH SUDAN, SPAIN, SRI LANKA, SUDAN, SURINAME, SVALBARD AND JAN MAYEN, SWAZILAND, SWEDEN, SWITZERLAND, SYRIA, TAIWAN, TAJIKISTAN, TANZANIA, THAILAND, TIMOR-LESTE, TOGO, TOKELAU, TONGA, TRINIDAD AND TOBAGO, TUNISIA, TURKEY, TURKMENISTAN, TURKS AND CAICOS ISLANDS, TUVALU, UGANDA, UKRAINE, UNITED ARAB EMIRATES, UNITED KINGDOM (UK), UNITED STATES (US), UNITED STATES (US) MINOR OUTLYING ISLANDS, URUGUAY, UZBEKISTAN, VANUATU, VATICAN, VENEZUELA, VIETNAM, VIRGIN ISLANDS (BRITISH), VIRGIN ISLANDS (US), WALLIS AND FUTUNA, WESTERN SAHARA, YEMEN, ZAMBIA, ZIMBABWE]
+
+16-10-2024T16:21:58 - [MESSAGE][PASSED] - Attribute 'class' of object 'Object Repository/Select2/select_single' is: 'country_to_state country_select select2-hidden-accessible'
+
+16-10-2024T16:21:59 - [MESSAGE][INFO] - The selected options list is: [Vietnam]
+
+16-10-2024T16:21:59 - [MESSAGE][PASSED] - Text '119 Nguyen Thi Thap' is set on object 'Object Repository/Pages/Checkout page/inputAddress'
+
+16-10-2024T16:22:01 - [MESSAGE][PASSED] - Text 'HCM' is set on object 'Object Repository/Pages/Checkout page/inputCity'
+
+16-10-2024T16:22:02 - [MESSAGE][PASSED] - Text '70000' is set on object 'Object Repository/Pages/Checkout page/inputPostcode'
+
+16-10-2024T16:22:03 - [MESSAGE][PASSED] - Text '0359912894' is set on object 'Object Repository/Pages/Checkout page/inputPhone'
+
+16-10-2024T16:22:10 - [MESSAGE][INFO] - Unable to find the element located by 'By.xpath: //*[@class = 'blockUI blockOverlay']'. Please recheck the objects properties to make sure the desired element is located. 
+
+16-10-2024T16:22:10 - [MESSAGE][WARNING] - [SELF-HEALING] Failed to find element with id 'Object Repository/Pages/Checkout page/blockUI'. Try using Self-healing.
+
+16-10-2024T16:22:10 - [MESSAGE][WARNING] - [SELF-HEALING] Cannot find elements when the XPath is null.
+
+16-10-2024T16:22:11 - [MESSAGE][WARNING] - [SELF-HEALING] Cannot find elements when the selector is null
+
+16-10-2024T16:22:11 - [MESSAGE][WARNING] - Object 'Object Repository/Pages/Checkout page/blockUI' is not present after 5 second(s)
+
+16-10-2024T16:22:11 - [MESSAGE][PASSED] - Web element with id: 'Object Repository/Pages/Checkout page/blockUI' located by 'By.xpath: //*[@class = 'blockUI blockOverlay']' is not present after '60' second(s)
+
+16-10-2024T16:22:12 - [MESSAGE][PASSED] - Object: 'Object Repository/Pages/Checkout page/btnPlaceOrder' is clicked on
+
+16-10-2024T16:22:18 - [MESSAGE][INFO] - Unable to find the element located by 'By.xpath: //*[@class = 'blockUI blockOverlay']'. Please recheck the objects properties to make sure the desired element is located. 
+
+16-10-2024T16:22:18 - [MESSAGE][WARNING] - [SELF-HEALING] Failed to find element with id 'Object Repository/Pages/Checkout page/blockUI'. Try using Self-healing.
+
+16-10-2024T16:22:18 - [MESSAGE][WARNING] - [SELF-HEALING] Cannot find elements when the XPath is null.
+
+16-10-2024T16:22:19 - [MESSAGE][WARNING] - [SELF-HEALING] Cannot find elements when the selector is null
+
+16-10-2024T16:22:19 - [MESSAGE][WARNING] - Object 'Object Repository/Pages/Checkout page/blockUI' is not present after 5 second(s)
+
+16-10-2024T16:22:19 - [MESSAGE][PASSED] - Web element with id: 'Object Repository/Pages/Checkout page/blockUI' located by 'By.xpath: //*[@class = 'blockUI blockOverlay']' is not present after '60' second(s)
+
+16-10-2024T16:22:19 - [MESSAGE][PASSED] - sample.Checkout.CheckoutShop is PASSED
+
+16-10-2024T16:22:19 - [TEST_STEP][PASSED] - sample.Login.logoutFromApplication(): sample.Login.logoutFromApplication is PASSED
+
+16-10-2024T16:22:19 - [MESSAGE][PASSED] - Object 'Object Repository/Pages/MyAccount page/lnkMyAccount' is present
+
+16-10-2024T16:22:22 - [MESSAGE][PASSED] - Object: 'Object Repository/Pages/MyAccount page/lnkMyAccount' is clicked on
+
+16-10-2024T16:22:22 - [MESSAGE][PASSED] - Object 'Object Repository/Pages/MyAccount page/lnkLogout' is present
+
+16-10-2024T16:22:26 - [MESSAGE][PASSED] - Object: 'Object Repository/Pages/MyAccount page/lnkLogout' is clicked on
+
+16-10-2024T16:22:26 - [MESSAGE][PASSED] - Object 'Object Repository/Pages/MyAccount page/nav_HomeMyaccount' is visible
+
+16-10-2024T16:22:26 - [MESSAGE][PASSED] - sample.Login.logoutFromApplication is PASSED
+
+16-10-2024T16:22:26 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed
+
+16-10-2024T16:22:27 - [MESSAGE][PASSED] - Browser is closed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[16-10-2024T16:21:10 - [TEST_SUITE][PASSED] - TS_1: Test Cases/Custom-keyword samples/Order and check out a single product]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

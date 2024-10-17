@@ -30,25 +30,25 @@ pipeline {
         //     }
         // }
 
-        stage('List Reports Directory') {
-            steps {
-                sh 'ls -R "/Users/aditidixit/Downloads/KRE.app/Contents/MacOS/Reports" || echo "No Reports folder found"'
-            }
-        }
+        // stage('List Reports Directory') {
+        //     steps {
+        //         sh 'ls -R "/Users/aditidixit/Downloads/KRE.app/Contents/MacOS/Reports" || echo "No Reports folder found"'
+        //     }
+        // }
 
     }
 
     post {
-    always {
-        script {
-            emailext(
+        always {
+            script {
+                emailext(
                 subject: "Katalon Test Report",
                 body: "Please find the attached Katalon test report.",
                 attachLog: true,
                 recipientProviders: [[$class: 'CulpritsRecipientProvider'], [$class: 'DevelopersRecipientProvider']],
                 to: 'shrikantd@siddhatech.com'
-            )
-        }
+               )
+            }
 
         // Move publishHTML outside of the script block
         // publishHTML(target: [
@@ -58,8 +58,8 @@ pipeline {
         //     keepAll: true,
         //     alwaysLinkToLastBuild: true
         // ])
+       }
     }
-}
 
 
 }

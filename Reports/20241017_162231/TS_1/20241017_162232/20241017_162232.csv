@@ -1,0 +1,12 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TS_1,Chrome 129.0.0.0,,,17-10-2024 16:22:38,17-10-2024 16:23:45,1m - 6.653s,PASSED
+,,,,,,,
+Test Cases/Custom-keyword samples/Order and check out a single product,Chrome 129.0.0.0,,,17-10-2024 16:22:38,17-10-2024 16:23:45,1m - 6.308s,PASSED
+sample.Login.loginIntoApplicationWithGlobalVariable(),Chrome 129.0.0.0,,,17-10-2024 16:22:39,17-10-2024 16:22:55,15.422s,PASSED
+delay(1),Chrome 129.0.0.0,,,17-10-2024 16:22:55,17-10-2024 16:22:56,1.074s,PASSED
+"waitForElementPresent(findTestObject(""Pages/Shop page/lnkShop""), waitPresentTimeout)",Chrome 129.0.0.0,,,17-10-2024 16:22:56,17-10-2024 16:22:56,0.389s,PASSED
+"click(findTestObject(""Pages/Shop page/lnkShop""))",Chrome 129.0.0.0,,,17-10-2024 16:22:56,17-10-2024 16:22:58,2.342s,PASSED
+sample.Shop.addToCartWithGlobalVariable(),Chrome 129.0.0.0,,,17-10-2024 16:22:58,17-10-2024 16:23:07,8.551s,PASSED
+"sample.Checkout.CheckoutShop(firstName, lastName, companyName, country, address, city, postCode, Phone)",Chrome 129.0.0.0,,,17-10-2024 16:23:07,17-10-2024 16:23:38,31.460s,PASSED
+sample.Login.logoutFromApplication(),Chrome 129.0.0.0,,,17-10-2024 16:23:38,17-10-2024 16:23:44,6.017s,PASSED
+closeBrowser(),Chrome 129.0.0.0,,,17-10-2024 16:23:44,17-10-2024 16:23:45,0.351s,PASSED

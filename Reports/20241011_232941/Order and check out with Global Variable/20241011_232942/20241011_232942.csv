@@ -1,0 +1,12 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Order and check out with Global Variable,Safari 17,,,11-10-2024 23:29:49,11-10-2024 23:30:43,53.104s,FAILED
+,,,,,,,
+Test Cases/Custom-keyword samples/Order and check out a single product,Safari 17,,,11-10-2024 23:29:50,11-10-2024 23:29:57,7.618s,PASSED
+sample.Login.loginIntoApplicationWithGlobalVariable(),Safari 17,,,11-10-2024 23:29:50,11-10-2024 23:29:57,6.778s,PASSED
+closeBrowser(),Safari 17,,,11-10-2024 23:29:57,11-10-2024 23:29:57,0.302s,PASSED
+,,,,,,,
+Test Cases/Custom-keyword samples/Order and check out a single product using coupon,Safari 17,,,11-10-2024 23:29:57,11-10-2024 23:30:43,45.233s,FAILED
+sample.Login.loginIntoApplicationWithGlobalVariable(),Safari 17,,,11-10-2024 23:29:57,11-10-2024 23:30:03,6.002s,PASSED
+"waitForElementPresent(findTestObject(""Pages/Shop page/lnkShop""), waitPresentTimeout)",Safari 17,,,11-10-2024 23:30:03,11-10-2024 23:30:04,0.116s,PASSED
+"click(findTestObject(""Pages/Shop page/lnkShop""))",Safari 17,,,11-10-2024 23:30:04,11-10-2024 23:30:04,0.093s,PASSED
+sample.Shop.applyCouponAndAddToCartWithGlobalVariable(),Safari 17,,,11-10-2024 23:30:04,11-10-2024 23:30:43,38.914s,FAILED

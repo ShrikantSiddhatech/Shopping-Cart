@@ -1,0 +1,5 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TS_1,,,,14-10-2024 17:02:31,14-10-2024 17:02:33,2.428s,FAILED
+,,,,,,,
+Test Cases/Custom-keyword samples/Order and check out a single product,,,,14-10-2024 17:02:33,14-10-2024 17:02:33,0.314s,FAILED
+sample.Login.loginIntoApplicationWithGlobalVariable(),,,,14-10-2024 17:02:33,14-10-2024 17:02:33,0.297s,FAILED

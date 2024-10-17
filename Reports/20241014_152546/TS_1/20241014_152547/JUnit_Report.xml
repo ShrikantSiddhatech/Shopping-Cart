@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="TS_1" time="9.58" tests="1" failures="0" errors="0">
+   <testsuite name="TS_1" tests="1" failures="0" errors="0" time="9.58" skipped="0" timestamp="14-10-2024T15:25:51" hostname="aditidixit - 192.168.1.175" id="Test Suites/TS_1">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform"/>
+         <property name="logFolder" value="/Users/aditidixit/Documents/Shopping-Cart/Reports/20241014_152546/TS_1/20241014_152547"/>
+         <property name="logFiles" value="/Users/aditidixit/Documents/Shopping-Cart/Reports/20241014_152546/TS_1/20241014_152547/execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="aditidixit - 192.168.1.175"/>
+         <property name="os" value="Mac OS X 64bit"/>
+         <property name="katalonVersion" value="9.7.2.223"/>
+         <property name="browser" value="Safari 17"/>
+         <property name="hostAddress" value="192.168.1.175"/>
+         <property name="sessionId" value="423FED11-C0C9-4268-A7FC-A76B6BC2AFF1"/>
+         <property name="seleniumVersion" value="3.141.59"/>
+         <property name="proxyInformation" value="ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList=&quot;&quot;, isApplyToDesiredCapabilities=true }"/>
+         <property name="platform" value="Mac OS X"/>
+      </properties>
+      <testcase name="Test Cases/Custom-keyword samples/Order and check out a single product" time="9.327" classname="Test Cases/Custom-keyword samples/Order and check out a single product" status="PASSED">
+         <system-out><![CDATA[14-10-2024T15:25:51 - [TEST_CASE][PASSED] - Test Cases/Custom-keyword samples/Order and check out a single product: Test Cases/Custom-keyword samples/Order and check out a single product
+
+14-10-2024T15:25:51 - [TEST_STEP][PASSED] - sample.Login.loginIntoApplicationWithGlobalVariable(): sample.Login.loginIntoApplicationWithGlobalVariable is PASSED
+
+14-10-2024T15:25:52 - [MESSAGE][INFO] - Starting 'Safari' driver
+
+14-10-2024T15:25:52 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+14-10-2024T15:26:00 - [MESSAGE][PASSED] - Browser is opened with url: 'http://cms.demo.katalon.com/my-account'
+
+14-10-2024T15:26:00 - [MESSAGE][PASSED] - sample.Login.loginIntoApplicationWithGlobalVariable is PASSED
+
+14-10-2024T15:26:00 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed
+
+14-10-2024T15:26:00 - [MESSAGE][PASSED] - Browser is closed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[14-10-2024T15:25:51 - [TEST_SUITE][PASSED] - TS_1: Test Cases/Custom-keyword samples/Order and check out a single product]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>
