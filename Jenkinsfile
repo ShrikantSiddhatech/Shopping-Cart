@@ -49,7 +49,6 @@ pipeline {
                 to: 'shrikantd@siddhatech.com'
                )
             }
-
         // Move publishHTML outside of the script block
         // publishHTML(target: [
         //     reportDir: 'Reports',
