@@ -23,23 +23,9 @@ pipeline {
             }
         }
 
-        // stage('List Workspace') {
+        // stage('Archive Reports') {
         //     steps {
-        //         sh 'ls -R' // This will list all files and directories in the workspace
-        //     }
-        // }
-
-
-        stage('Archive Reports') {
-            steps {
-                archiveArtifacts artifacts: '/Users/aditidixit/Documents/Shopping-Cart/Reports/report.html', allowEmptyArchive: true
-            }
-        }
-
-
-        // stage('List Reports Directory') {
-        //     steps {
-        //         sh 'ls -R "/Users/aditidixit/Downloads/KRE.app/Contents/MacOS/Reports" || echo "No Reports folder found"'
+        //         archiveArtifacts artifacts: '/Users/aditidixit/Documents/Shopping-Cart/Reports/report.html', allowEmptyArchive: true
         //     }
         // }
 
@@ -52,18 +38,19 @@ pipeline {
                 subject: "Katalon Test Report",
                 body: "Please find the attached Katalon test report.",
                 attachLog: true,
+                attachments: '/Users/aditidixit/Documents/Shopping-Cart/Reports/report.html',               
                 recipientProviders: [[$class: 'CulpritsRecipientProvider'], [$class: 'DevelopersRecipientProvider']],
                 to: 'siddhaappempresa2@gmail.com'
                )
             }
         
-            publishHTML(target: [
-              reportDir: '/Users/aditidixit/Documents/Shopping-Cart/Reports',
-              reportFiles: 'report.html',
-              reportName: 'Katalon Test Report',
-              keepAll: true,
-              alwaysLinkToLastBuild: true
-            ])
+            // publishHTML(target: [
+            //   reportDir: '/Users/aditidixit/Documents/Shopping-Cart/Reports',
+            //   reportFiles: 'report.html',
+            //   reportName: 'Katalon Test Report',
+            //   keepAll: true,
+            //   alwaysLinkToLastBuild: true
+            // ])
        }
     }
 
