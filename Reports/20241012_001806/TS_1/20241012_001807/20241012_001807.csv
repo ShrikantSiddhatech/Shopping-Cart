@@ -1,6 +1,0 @@
-Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
-TS_1,Safari 17,,,12-10-2024 00:18:12,12-10-2024 00:18:19,7.554s,PASSED
-,,,,,,,
-Test Cases/Custom-keyword samples/Order and check out a single product,Safari 17,,,12-10-2024 00:18:12,12-10-2024 00:18:19,7.257s,PASSED
-sample.Login.loginIntoApplicationWithGlobalVariable(),Safari 17,,,12-10-2024 00:18:13,12-10-2024 00:18:19,6.463s,PASSED
-closeBrowser(),Safari 17,,,12-10-2024 00:18:19,12-10-2024 00:18:19,0.296s,PASSED

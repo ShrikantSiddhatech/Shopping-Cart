@@ -1,8 +1,0 @@
-Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
-Order and check out with Global Variable,,,,11-10-2024 23:19:15,11-10-2024 23:19:18,3.269s,FAILED
-,,,,,,,
-Test Cases/Custom-keyword samples/Order and check out a single product,,,,11-10-2024 23:19:15,11-10-2024 23:19:17,2.375s,FAILED
-sample.Login.loginIntoApplicationWithGlobalVariable(),,,,11-10-2024 23:19:15,11-10-2024 23:19:17,1.878s,FAILED
-,,,,,,,
-Test Cases/Custom-keyword samples/Order and check out a single product using coupon,,,,11-10-2024 23:19:17,11-10-2024 23:19:18,0.611s,FAILED
-sample.Login.loginIntoApplicationWithGlobalVariable(),,,,11-10-2024 23:19:17,11-10-2024 23:19:18,0.489s,FAILED
