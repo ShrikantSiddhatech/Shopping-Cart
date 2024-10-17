@@ -18,16 +18,9 @@ pipeline {
                         -browserType="Chrome" \
                         -executionProfile="default" \
                         -apiKey="a7e45f80-496e-47da-9d8d-09cca7cac63f" \
-                        -reportFolder='/Users/aditidixit/Documents/Shopping-Cart/Reports'
                     '''    
             }
         }
-
-        // stage('Archive Reports') {
-        //     steps {
-        //         archiveArtifacts artifacts: '/Users/aditidixit/Documents/Shopping-Cart/Reports/report.html', allowEmptyArchive: true
-        //     }
-        // }
 
     }
 
@@ -37,20 +30,11 @@ pipeline {
                 emailext(
                 subject: "Katalon Test Report",
                 body: "Please find the attached Katalon test report.",
-                attachLog: true,
-                attachments: '/Users/aditidixit/Documents/Shopping-Cart/Reports/report.html',               
+                attachLog: true,             
                 recipientProviders: [[$class: 'CulpritsRecipientProvider'], [$class: 'DevelopersRecipientProvider']],
                 to: 'siddhaappempresa2@gmail.com'
                )
             }
-        
-            // publishHTML(target: [
-            //   reportDir: '/Users/aditidixit/Documents/Shopping-Cart/Reports',
-            //   reportFiles: 'report.html',
-            //   reportName: 'Katalon Test Report',
-            //   keepAll: true,
-            //   alwaysLinkToLastBuild: true
-            // ])
        }
     }
 
