@@ -31,7 +31,7 @@ pipeline {
 
         stage('Archive Reports') {
             steps {
-                archiveArtifacts artifacts: 'Reports/*.html', allowEmptyArchive: true
+                archiveArtifacts artifacts: '/Users/aditidixit/Documents/Shopping-Cart/Reports/*.html', allowEmptyArchive: true
             }
         }
 
@@ -55,13 +55,13 @@ pipeline {
                )
             }
         
-        publishHTML(target: [
-            reportDir: 'Reports',
-            reportFiles: 'Report.html', // Ensure this matches your report file name
-            reportName: 'Katalon Test Report',
-            keepAll: true,
-            alwaysLinkToLastBuild: true
-        ])
+            publishHTML(target: [
+              reportDir: 'Reports',
+              reportFiles: 'Report.html', // Ensure this matches your report file name
+              reportName: 'Katalon Test Report',
+              keepAll: true,
+              alwaysLinkToLastBuild: true
+            ])
        }
     }
 
