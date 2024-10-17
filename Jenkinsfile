@@ -29,11 +29,13 @@ pipeline {
         //     }
         // }
 
+
         stage('Archive Reports') {
             steps {
-                archiveArtifacts artifacts: '/Users/aditidixit/Documents/Shopping-Cart/Reports/*.html', allowEmptyArchive: true
+                archiveArtifacts artifacts: '/Users/aditidixit/Documents/Shopping-Cart/Reports/report.html', allowEmptyArchive: true
             }
         }
+
 
         // stage('List Reports Directory') {
         //     steps {
@@ -56,8 +58,8 @@ pipeline {
             }
         
             publishHTML(target: [
-              reportDir: 'Reports',
-              reportFiles: 'Report.html', // Ensure this matches your report file name
+              reportDir: '/Users/aditidixit/Documents/Shopping-Cart/Reports',
+              reportFiles: 'report.html',
               reportName: 'Katalon Test Report',
               keepAll: true,
               alwaysLinkToLastBuild: true
