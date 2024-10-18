@@ -5,6 +5,9 @@ pipeline {
         disableConcurrentBuilds()
     }
 
+    env{
+        BUILD_STATUS='Success'
+    }
 
     stages {
         stage('Katalon TC') {
@@ -27,12 +30,8 @@ pipeline {
                                 throw new Exception("Katalon tests failed with exit code ${result}")
                             }
 
-                        }catch(Exception e){
-                            emailext (
-                            subject: "${env.JOB_NAME} - Build #${env.BUILD_NUMBER}",
-                            body: "The build was Faild! Please Check : ${env.BUILD_URL}",
-                            to: 'siddhaappempresa2@gmail.com'
-                            )        
+                        }catchError(message: 'Test Case Was Failed !') {
+                            env.BUILD_STATUS='Failed'        
                         } 
                     }
                 }       
@@ -46,7 +45,7 @@ pipeline {
             script {
                 emailext(
                     subject: "Build Status",
-                    body: "The build was Success, Please Check : ${env.BUILD_URL}",
+                    body: "The build was ${env.BUILD_STATUS}, Please Check : ${env.BUILD_URL}",
                     attachLog: true,
                     recipientProviders: [[$class: 'CulpritsRecipientProvider'], [$class: 'DevelopersRecipientProvider']],
                     to: 'siddhaappempresa2@gmail.com'
