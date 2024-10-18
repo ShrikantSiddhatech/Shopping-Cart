@@ -30,7 +30,7 @@ pipeline {
                                 throw new Exception("Katalon tests failed with exit code ${result}")
                             }
 
-                        }catchError(message: 'Test Case Was Failed !') {
+                        }catch(Exception e) {
                             env.BUILD_STATUS='Failed'        
                         } 
                     }
