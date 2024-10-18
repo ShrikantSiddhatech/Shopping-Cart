@@ -5,10 +5,6 @@ pipeline {
         disableConcurrentBuilds()
     }
 
-    env{
-        BUILD_STATUS='Success'
-    }
-
     stages {
         stage('Katalon TC') {
             steps {
