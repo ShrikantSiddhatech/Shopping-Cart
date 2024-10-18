@@ -9,31 +9,33 @@ pipeline {
     stages {
         stage('Katalon TC') {
             steps {
-                script{
-                    try{
-                        sh '''
-                        cd /Users/aditidixit/Downloads/KRE.app/Contents/MacOS
-                        ./katalonc -noSplash -runMode=console \
-                        -projectPath="/Users/aditidixit/Documents/Shopping-Cart/shopping-cart-tests.prj" \
-                        -retry=0 \
-                        -testSuitePath="Test Suites/TS_1" \
-                        -browserType="Chrome" \
-                        -executionProfile="default" \
-                        -apiKey="a7e45f80-496e-47da-9d8d-09cca7cac63f" \
-                        '''
+                lock(resource: 'my_lock') {
+                    script{
+                        try{
+                            sh '''
+                            cd /Users/aditidixit/Downloads/KRE.app/Contents/MacOS
+                            ./katalonc -noSplash -runMode=console \
+                            -projectPath="/Users/aditidixit/Documents/Shopping-Cart/shopping-cart-tests.prj" \
+                            -retry=0 \
+                            -testSuitePath="Test Suites/TS_1" \
+                            -browserType="Chrome" \
+                            -executionProfile="default" \
+                            -apiKey="a7e45f80-496e-47da-9d8d-09cca7cac63f" \
+                            '''
 
-                        if (result != 0) {
-                           throw new Exception("Katalon tests failed with exit code ${result}")
-                        }
+                            if (result != 0) {
+                                throw new Exception("Katalon tests failed with exit code ${result}")
+                            }
 
-                    }catch(Exception e){
-                        emailext (
-                        subject: "${env.JOB_NAME} - Build #${env.BUILD_NUMBER}",
-                        body: "The build was Faild! Please Check : ${env.BUILD_URL}",
-                        to: 'siddhaappempresa2@gmail.com'
-                        )        
-                    }                
-                }    
+                        }catch(Exception e){
+                            emailext (
+                            subject: "${env.JOB_NAME} - Build #${env.BUILD_NUMBER}",
+                            body: "The build was Faild! Please Check : ${env.BUILD_URL}",
+                            to: 'siddhaappempresa2@gmail.com'
+                            )        
+                        } 
+                    }
+                }       
             }
         }
 
